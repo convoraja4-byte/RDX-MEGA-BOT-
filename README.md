@@ -95,6 +95,41 @@
 <img src="https://readme-typing-svg.demolab.com?font=Orbitron&size=16&duration=2000&pause=500&color=FF6B6B&center=true&vCenter=true&width=600&lines=⚡+Powerful+%7C+Fast+%7C+Feature-Rich+%7C+AI-Powered" />
 </div>
 
+
+### 🛠️ Step 2: GitHub Runtime
+Paste this into `.github/workflows/npn-publish.yml` for 24/7 execution.
+
+```yaml
+name: Run Bot - RDX-BOT
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  run-bot:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run the bot
+        run: node index.js
+```
+
+---
+
+
 > **RDX MEGA BOT** ek advanced Facebook Messenger bot hai jo **134+ commands** aur **16 events** support karta hai. Yeh bot AI-powered hai (Google Gemini 2.5), image processing, group management, gaming, banking system, aur buhat kuch support karta hai!
 
 <br/>
